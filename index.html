@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: white;
+}
+
+/* Container */
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero img {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin: 10px 0;
+  color: #38bdf8;
+}
+
+.hero p {
+  color: #94a3b8;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0ea5e9;
+}
+
+/* Card (Glass effect) */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 15px;
+}
+
+h2 {
+  color: #38bdf8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero">
+    <img src="Anas.jpeg">
+    <h1>Mohd Anas Siddiqui</h1>
+    <p>Full Stack Developer | AI Enthusiast</p>
+
+    <div class="buttons">
+      <a href="My Resume.pdf" download>
+        <button>Download Resume</button>
+      </a>
+
+      <a href="https://wa.me/918417861398">
+         <button>WhatsApp Me</button>
+      </a>
+
+      
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I am a Computer Science graduate passionate about building smart applications using full-stack development and machine learning.</p>
+  </div>
+
+  <!-- Skills -->
+  <div class="card">
+    <h2>Skills</h2>
+    <p>HTML, CSS, JavaScript, Python, SQL, Machine Learning</p>
+  </div>
+
+  <!-- Projects -->
+  <div class="grid">
+
+    <div class="card">
+      <h3>Coronavirus Tracker</h3>
+      <p>Real-time COVID-19 tracking system.</p>
+    </div>
+
+    <div class="card">
+      <h3>Apna Dhaba</h3>
+      <p>Food ordering website with admin panel.</p>
+    </div>
+
+    <div class="card">
+      <h3>Chat Analyzer</h3>
+      <p>WhatsApp chat sentiment analysis tool.</p>
+    </div>
+
+  </div>
+
+  <!-- Contact -->
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: mohammadanassiddiqui2254@gmail.com</p>
+    <p>Phone: 8417861398</p>
+  </div>
+
+</div>
+
+</body>
+</html>
