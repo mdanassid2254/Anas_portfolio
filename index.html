@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Portfolio</title>
-
+<link rel="stylesheet" href="style.css">
 <style>
 
 body {
@@ -88,7 +88,12 @@ h2 {
 }
 
 </style>
-
+<button onclick="toggleMode()">Toggle Mode</button>
+  <script>
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
+</script>
 </head>
 
 <body>
@@ -99,7 +104,7 @@ h2 {
   <div class="hero">
     <img src="Anas.jpeg">
     <h1>Mohd Anas Siddiqui</h1>
-    <p>Full Stack Developer | AI Enthusiast</p>
+    <p id="typing"></p>
 
     <div class="buttons">
       <a href="My Resume.pdf" download>
@@ -110,7 +115,7 @@ h2 {
          <button>WhatsApp Me</button>
       </a>
 
-      
+
     </div>
   </div>
 
@@ -123,7 +128,16 @@ h2 {
   <!-- Skills -->
   <div class="card">
     <h2>Skills</h2>
-    <p>HTML, CSS, JavaScript, Python, SQL, Machine Learning</p>
+    <div>
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Python</span>
+      <span class="skill">Machine Learning</span>
+      <span class="skill">Artificial Intelligence</span>
+      <span class="skill">Software Developer</span>
+    </div>
+
   </div>
 
   <!-- Projects -->
@@ -132,16 +146,25 @@ h2 {
     <div class="card">
       <h3>Coronavirus Tracker</h3>
       <p>Real-time COVID-19 tracking system.</p>
+      <a href="#" target="_blank">
+        <button>Live Demo</button>
+      </a>
     </div>
 
     <div class="card">
       <h3>Apna Dhaba</h3>
       <p>Food ordering website with admin panel.</p>
+      <a href="#" target="_blank">
+        <button>Live Demo</button>
+      </a>
     </div>
 
     <div class="card">
       <h3>Chat Analyzer</h3>
       <p>WhatsApp chat sentiment analysis tool.</p>
+      <a href="#" target="_blank">
+        <button>Live Demo</button>
+      </a>
     </div>
 
   </div>
@@ -155,5 +178,42 @@ h2 {
 
 </div>
 
+<div class="grid">
+  <div class="card"><h2>5+</h2><p>Projects</p></div>
+  <div class="card"><h2>3+</h2><p>Technologies</p></div>
+  <div class="card"><h2>100%</h2><p>Dedication</p></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<div id="particles-js"></div>
+
+<script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        move: { speed: 2 }
+      }
+    });
+</script>
+
+
+
 </body>
 </html>
+
+<script>
+const text = "Full Stack Developer | AI Enthusiast";
+let i = 0;
+
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+
+typing();
+</script>
